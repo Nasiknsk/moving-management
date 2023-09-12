@@ -1,0 +1,10 @@
+Packing and moving project
+
+1. adding equipment and vehicle
+2. Holiday request and accepted by considering the date and time
+3. Hire employees and vehicles from out 
+4. Inquiries and compensations
+5. Things list
+6. temporary employee management
+7. Schedule updating system
+8. Payments

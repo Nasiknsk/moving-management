@@ -1,0 +1,22 @@
+morning 1
+evening 2
+full    3
+
+Name
+Type
+Date
+Session
+Reason
+Description
+
+
+h_id
+date_apply
+date_req
+type
+reason
+description
+status
+emp
+
+checking the form and parsing different session values to database

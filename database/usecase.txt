@@ -1,0 +1,24 @@
+Customer - The person who wants to hire a packing and moving service.
+Admin - The person who manages the website and interacts with the customers.
+Mover - The person who actually performs the packing and moving service.
+Payment Gateway - The external system that handles online payments.
+Some of the use cases that the actors might engage in are:
+
+Customer
+Search for packing and moving services.
+Request a quote.
+Schedule a service.
+Track the progress of the service.
+Make a payment.
+Cancel the service.
+Admin
+Manage customer accounts.
+Manage mover accounts.
+Manage service requests.
+Manage payments.
+Mover
+Accept a service request.
+Update the status of the service.
+Update the location of the service.
+Payment Gateway
+Process payments.

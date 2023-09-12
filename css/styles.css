@@ -1,0 +1,107 @@
+/* Sidebar Navigation Styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+}
+
+.sidebar li:hover {
+  background-color: #555;
+}
+
+/* Dropdown Panel Styles */
+.dropdown-menu {
+  position: static !important;
+  display: none;
+  background-color: #333;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: rgb(31, 16, 202);
+}
+
+.dropdown-menu a:hover {
+  background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Form Styles */
+.container {
+  width: 400px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-top: 30px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.input-box input,
+.input-box select {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.input-box input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-box input[type="submit"]:hover {
+  background-color: #45a049;
+}

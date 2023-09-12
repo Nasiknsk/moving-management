@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dynamic Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-5">
+    <form method="POST" action="process.php">
+      <div class="form-group">
+        <label for="num_days">Enter the number of days:</label>
+        <input type="number" class="form-control" id="num_days" name="num_days" min="1" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <div class="container mt-5" id="dynamic_form"></div>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var numDays = parseInt(document.getElementById('num_days').value);
+
+      // Generate date and session input fields based on the number of days
+      var inputsHTML = '';
+      for (var i = 1; i <= numDays; i++) {
+        inputsHTML += '<div class="row">';
+        
+        inputsHTML += '<div class="col-md-6">';
+        inputsHTML += '<div class="form-group">';
+        inputsHTML += '<label for="date_' + i + '">Date ' + i + ':</label>';
+        inputsHTML += '<input type="date" class="form-control" id="date_' + i + '" name="dates[]" required>';
+        inputsHTML += '</div>';
+        inputsHTML += '</div>';
+
+        inputsHTML += '<div class="col-md-6">';
+        inputsHTML += '<div class="form-group">';
+        inputsHTML += '<label for="session_' + i + '">Session ' + i + ':</label>';
+        inputsHTML += '<select class="form-control" id="session_' + i + '" name="sessions[]">';
+        inputsHTML += '<option value="morning">Morning</option>';
+        inputsHTML += '<option value="evening">Evening</option>';
+        inputsHTML += '<option value="full">Full</option>';
+        inputsHTML += '</select>';
+        inputsHTML += '</div>';
+        inputsHTML += '</div>';
+
+        inputsHTML += '</div>'; // Closing row div
+      }
+
+      // Set the generated HTML to the dynamic form container
+      var dynamicFormContainer = document.getElementById('dynamic_form');
+      dynamicFormContainer.innerHTML = inputsHTML;
+    });
+  </script>
+</body>
+
+</html>
